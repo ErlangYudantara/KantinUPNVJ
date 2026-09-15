@@ -1,18 +1,22 @@
+import { Clock3 } from "lucide-react";
+import { Store } from "lucide-react";
+import { CreditCard } from "lucide-react";
+
 const features = [
   {
-    icon: "⏱️",
+    icon: Clock3,
     title: "Ga perlu antre panjang",
     description:
       "Pesan dari kelas atau kosan, tinggal ambil pas udah jadi. Jam istirahat jadi lebih tenang.",
   },
   {
-    icon: "🍽️",
+    icon: Store,
     title: "Semua kios dalam satu tempat",
     description:
       "Bandingkan menu dan harga dari tiap kios kantin tanpa harus muter dulu.",
   },
   {
-    icon: "💳",
+    icon: CreditCard,
     title: "Bayar sesuai kebiasaan",
     description:
       "Cash langsung di kios atau QRIS, keduanya tetap bisa dipakai seperti biasa.",
@@ -29,7 +33,7 @@ export default function Features() {
         <div className="mt-12 grid gap-10 md:grid-cols-3">
           {features.map((f) => (
             <div key={f.title} className="border-l-2 border-[#E8A33D] pl-5">
-              <div className="text-2xl">{f.icon}</div>
+             <f.icon size={24} className="text-[#14532D]"/>
               <h3 className="mt-3 font-['Fraunces'] text-lg text-[#1E3D2F]">
                 {f.title}
               </h3>

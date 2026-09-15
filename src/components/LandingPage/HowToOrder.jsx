@@ -29,7 +29,7 @@ const steps = [
 
 export default function HowToOrder() {
   return (
-    <section id="cara-pesan" className="px-6 py-16">
+    <section id="cara-pesan" className="scroll-mt-24 px-6 py-16">
       <div className="mx-auto max-w-6xl rounded-3xl bg-[#EDF1F9] px-6 py-16 text-center">
         <p className="text-sm font-semibold text-[#C98A1D]">
           ALUR PEMESANAN PRAKTIS

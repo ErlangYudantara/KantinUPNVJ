@@ -1,4 +1,8 @@
 import {Star, Clock} from "lucide-react";
+import buSriImg from "../../assets/image/BuSri.png";
+import nusantaraImg from "../../assets/image/Nusantara.png";
+import esVeteranImg from "../../assets/image/EsVeteran.png";
+
 const stalls = [
   {
     number: "STAN 01",
@@ -10,8 +14,7 @@ const stalls = [
       "Ayam Geprek sambal bawang pedas nikmat, nasi hemat mahasiswa, dan aneka lauk rumahan bergizi.",
     hours: "07.30 - 16.30 WIB",
     price: "Mulai Rp 12.000",
-    gradient: "from-[#F4A261] to-[#E76F51]",
-    emoji: "🍛",
+    image :buSriImg,
   },
   {
     number: "STAN 02",
@@ -23,8 +26,7 @@ const stalls = [
       "Soto ayam kaldu rempah kuning, soto Betawi gurih, serta aneka masakan tradisional nusantara.",
     hours: "08.00 - 17.00 WIB",
     price: "Mulai Rp 15.000",
-    gradient: "from-[#EAD7A0] to-[#D4A94A]",
-    emoji: "🍜",
+    image: nusantaraImg,
   },
   {
     number: "STAN 03",
@@ -36,14 +38,13 @@ const stalls = [
       "Kopi susu gula aren khas kampus, matcha oat, teh herbal segar, dan jus buah asli penyemangat kuliah.",
     hours: "07.30 - 18.00 WIB",
     price: "Mulai Rp 8.000",
-    gradient: "from-[#B08968] to-[#7F5539]",
-    emoji: "🧋",
+    image: esVeteranImg,
   },
 ];
 
 export default function FeaturedMenu() {
   return (
-    <section id="menu" className="bg-[#F5F7FB] px-6 py-20">
+    <section id="menu" className="scroll-mt-24 bg-[#F5F7FB] px-6 py-20">
       <div className="mx-auto max-w-6xl text-center">
         <p className="text-sm font-semibold text-[#C98A1D]">
           PILIHAN MAKANAN & MINUMAN
@@ -58,11 +59,9 @@ export default function FeaturedMenu() {
               key={s.name}
               className="overflow-hidden rounded-2xl border border-[#E5E9F0] bg-white"
             >
-              <div
-                className={`relative flex h-44 items-center justify-center bg-gradient-to-br ${s.gradient} text-5xl`}
-                
-              >
-                <span aria-hidden="true">{s.emoji}</span>
+              <div className="relative h-44">
+                <img src={s.image} alt={s.name} className="h-full w-full object-cover"/>
+              
 
                 <span className="absolute left-3 top-3 inline-flex items-center gap-1 rounded-full bg-white px-2.5 py-1 text-xs font-semibold text-[#14532D]">
                   <Star size={12} fill="currentColor"/>
