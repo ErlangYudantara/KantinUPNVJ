@@ -1,6 +1,8 @@
 import { useState } from "react";
 import {Menu, X} from "lucide-react";
 import logoUpnvj from "../../assets/logos/LOGO_UPNVJ.png";
+import { Link }  from "react-router-dom"; 
+
 const navLinks = [
   { label: "Menu", href: "#menu" },
   { label: "Cara Pesan", href: "#cara-pesan" },
@@ -32,12 +34,12 @@ export default function Navbar() {
           ))}
         </nav>
 
-        <a
-          href="#menu"
+        <Link
+          to="/Login"
           className="hidden rounded-lg bg-[#14532D] px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-[#0F3F22] md:inline-block"
         >
           Pesan Sekarang
-        </a>
+        </Link>
 
         <button
           onClick={() => setOpen(!open)}
@@ -60,13 +62,13 @@ export default function Navbar() {
               {link.label}
             </a>
           ))}
-          <a
-            href="#menu"
+          <Link
+            to="/Login"
             onClick={() => setOpen(false)}
             className="mt-2 rounded-lg bg-[#14532D] px-5 py-2.5 text-center text-sm font-semibold text-white"
           >
             Pesan Sekarang
-          </a>
+          </Link>
         </div>
       )}
     </header>

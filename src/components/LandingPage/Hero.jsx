@@ -1,4 +1,5 @@
 import { UtensilsCrossed, LogIn, Leaf}  from "lucide-react";
+import { Link } from "react-router-dom"; 
 
 const stats = [
   { value: "3 Stan Mitra Aktif", label: "Pilihan Menu Kampus", accent: false },
@@ -26,20 +27,20 @@ export default function Hero() {
         </p>
 
         <div className="mt-8 flex flex-wrap justify-center gap-4">
-          <a
-            href="#menu"
+          <Link
+            to="/Login"
             className="inline-flex items-center gap-2 rounded-lg bg-[#14532D] px-6 py-3 text-sm font-semibold text-white hover:bg-[#0F3F22]"
           >
             <UtensilsCrossed size={16} />
             Pesan Sekarang
-          </a>
-          <a
-            href="#login"
+          </Link>
+          <Link
+            to="/Login"
             className="inline-flex items-center gap-2 rounded-lg bg-[#DCEAFB] px-6 py-3 text-sm font-semibold text-[#1D4ED8] hover:bg-[#CBDFF7]"
           >
             <LogIn size={16} />
             Masuk / Daftar Akun
-          </a>
+          </Link>
         </div>
 
         <div className="mx-auto mt-12 grid max-w-2xl grid-cols-3 divide-x divide-[#E5E9F0] border-t border-[#E5E9F0] pt-8">
