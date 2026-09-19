@@ -4,7 +4,7 @@ export default function LoginFooter() {
     <div className="mt-6 text-center">
       <p className="text-sm text-[#4B5563]">
         Belum punya akun Kantin?{" "}
-        <Link to="/Login" className="font-semibold text-[#14532D] hover:underline">
+        <Link to="/register" className="font-semibold text-[#14532D] hover:underline">
           Daftar di sini
         </Link>
       </p>
